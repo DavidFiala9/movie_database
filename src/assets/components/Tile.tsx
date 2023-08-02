@@ -1,6 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { Movies } from '../data/movies';
-import { Plc, TileContainer } from './tile.styled';
+import { Movies } from '../data/Movies';
+import {
+  SingleTile,
+  TileContainer,
+  TileHeader,
+  TileWrapper,
+} from './Tile.styled';
 
 type TileParameter = {
   text?: string;
@@ -12,26 +16,19 @@ interface Movie {
 }
 
 const Tile: React.FC<TileParameter> = () => {
-  const plc = 'ahoj';
-
-  useEffect(() => {
-    console.log('asfqwfqwq' + { plc });
-    console.log(`asfqwf ${plc}`);
-  }, []);
-
   return (
-    <div>
-      <Plc>
-        <TileContainer>
-          {Movies.map((movie: Movie) => (
-            <div className="tile">
+    <TileWrapper>
+      <TileContainer>
+        {Movies.map((movie: Movie) => (
+          <SingleTile>
+            <TileHeader>
               <div className="tileHeader">{movie.name}</div>
-              <div>{movie.releaseDate}</div>
-            </div>
-          ))}
-        </TileContainer>
-      </Plc>
-    </div>
+            </TileHeader>
+            <div>({movie.releaseDate})</div>
+          </SingleTile>
+        ))}
+      </TileContainer>
+    </TileWrapper>
   );
 };
 

@@ -1,4 +1,4 @@
-import { Movies } from '../data/Movies';
+import { Movies } from '../../data/MovieData';
 import {
   SingleTile,
   TileContainer,
@@ -21,9 +21,7 @@ const Tile: React.FC<TileParameter> = () => {
       <TileContainer>
         {Movies.map((movie: Movie) => (
           <SingleTile>
-            <TileHeader>
-              <div className="tileHeader">{movie.name}</div>
-            </TileHeader>
+            <TileHeader>{movie.name}</TileHeader>
             <div>({movie.releaseDate})</div>
           </SingleTile>
         ))}

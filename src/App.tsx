@@ -1,6 +1,6 @@
 import './App.css';
-import Tile from './assets/components/Tile';
-import BackgroundSlider from './assets/components/BackgroundSlider';
+import Tile from './assets/components/Tiles/Tile';
+import BackgroundSlider from './assets/components/Background/BackgroundSlider';
 
 function App() {
   return (

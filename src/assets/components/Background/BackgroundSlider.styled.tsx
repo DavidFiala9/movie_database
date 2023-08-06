@@ -5,7 +5,7 @@ interface ContainerProps {
 }
 
 export const BackgroundContainerStyled = styled.div<ContainerProps>`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: -1;

@@ -2,6 +2,7 @@ import { styled } from 'styled-components';
 
 export const TileHeader = styled.div`
   font-size: 20px;
+  margin-bottom: 5px;
 `;
 
 export const SingleTile = styled.span`
@@ -17,6 +18,7 @@ export const SingleTile = styled.span`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  opacity: 0.9;
 `;
 
 export const TileContainer = styled.div`
@@ -25,6 +27,11 @@ export const TileContainer = styled.div`
   justify-content: center;
   align-items: center;
   column-gap: 15px;
+
+  & :hover {
+    background-color: #9a003b;
+    cursor: pointer;
+  }
 `;
 
 export const TileWrapper = styled.div`

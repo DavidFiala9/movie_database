@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BackgroundImages } from '../data/BackgroundImages';
+import { BackgroundImages } from '../../data/BackgroundImages';
 import { BackgroundContainerStyled } from './BackgroundSlider.styled';
 
 const BackgroundSlider: React.FC = () => {
